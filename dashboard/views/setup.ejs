@@ -43,7 +43,7 @@
                         b.rawPosition
                         -
                         a.rawPosition).forEach((role, i) => { %>
-                        <option value="<%= role.id%>" <%=bot.settings.get(guild.id, "roles" ).includes(role.id)
+                        <option value="<%= role.id%>" <%=role.id%>
                             ? "selected" : "tt" %>
                             > <%= role.name%>
                         </option>
@@ -174,7 +174,6 @@
             <i class="rolesBtnText" data-icon="cil:save"> Save Settings</i>
         </button>
     </form>
-
 
 
 
