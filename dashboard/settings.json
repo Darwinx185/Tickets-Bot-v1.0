@@ -1,0 +1,17 @@
+{
+    "website": {
+        "domain": ""
+    },
+    "config": {
+        "port": 80,
+        "callback": "",
+        "website": "",
+        "clientID": "",
+        "secret": ""
+    },
+    "bot": {
+        "avatar": "",
+        "name": ""
+    },
+    "statu": ""
+}

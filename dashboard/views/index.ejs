@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=config.name%>
+    </title>
+    <link rel="icon" href="<%=config.av%>">
+
+</head>
+
+<body background="https://cdn.discordapp.com/attachments/822869973457960960/902973263666364418/unknown.png">
+    <section>
+        <header>
+            <div class="main-nav"> <a><img class="avatar"
+                        src="https://cdn.discordapp.com/avatars/<%=member.id%>/<%=member.user.avatar%>.png" /></a>
+                <a class="username">
+                    <%=member.user.username%>
+                </a> <a href="/logout" class="LogoutButton">Logout</a>
+
+                <div class="loogo">
+                    <a href="/dashboard"><img class="brand-img"
+                            src="https://cdn.discordapp.com/avatars/801987766018899979/cdaa6be88d5675fe0846e4eab734cb0d.png?size=1024" /></a>
+                </div>
+        </header>
+        </div>
+        <div class="secNav">
+            <!-- <img src="https://cdn.discordapp.com/avatars/801987766018899979/cdaa6be88d5675fe0846e4eab734cb0d.png?size=1024"
+            alt="" class="secNavImg"> -->
+            <div class="picker">
+                <h3>Gumball Bot</h3>
+                <br>
+                <h2>Make your own WonderFul Ticket System</h2>
+                <br>
+                <div class="buttonS">
+                    <a href="https://discordapp.com/oauth2/authorize?client_id=801987766018899979&scope=bot%20applications.commands&redirect_uri=https://js-web.ahmedhossam11.repl.co/callback"
+                        class="buttonSbtn1">
+                        <h1>Invite</h1>
+                    </a>
+                    <a href="/dashboard" class="buttonSbtn2">
+                        <h1>Dashboard</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="picker2">
+            <h3>Features</h3>
+
+        </div> -->
+        <div id="BAAR"></div>
+
+
+
+    </section>
+</body>
+
+
+<!-- <script src="./app.js"></script> -->
+
+
+<style>
+    .buttonS {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        justify-items: center;
+
+        margin-top: 10px;
+        /* background-color: rgb(90, 0, 63); */
+        height: 70px;
+        width: 500px;
+    }
+
+    .buttonSbtn1 {
+        display: grid;
+        grid-template-rows: 1fr 0.2fr;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+
+        background: rgba(0, 0, 0, 0);
+        border: 2px solid rgb(0, 194, 194);
+        height: 60px;
+        width: 200px;
+        text-decoration: none;
+
+        transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+    }
+
+    .buttonSbtn1:hover {
+        background: rgb(0, 194, 194);
+        transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+    }
+
+    .buttonSbtn1 h1 {
+        transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+
+        padding-right: 99px;
+        padding-left: 99px;
+        padding-top: 34px;
+        padding-bottom: 34px;
+        font: 25px Monospace, sans-serif;
+        color: rgb(0, 194, 194);
+    }
+
+    .buttonSbtn1 h1:hover {
+        color: rgb(255, 255, 255);
+        transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+
+
+    }
+
+    .buttonSbtn2 {
+        display: grid;
+        grid-template-rows: 1fr 0.2fr;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+
+        background: rgba(0, 0, 0, 0);
+        border: 2px solid rgb(134, 134, 134);
+        height: 60px;
+        width: 200px;
+        text-decoration: none;
+
+        transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+    }
+
+    .buttonSbtn2:hover {
+        background: rgb(134, 134, 134);
+        transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+    }
+
+    .buttonSbtn2 h1 {
+        transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+
+        padding-right: 99px;
+        padding-left: 99px;
+        padding-top: 34px;
+        padding-bottom: 34px;
+        font: 25px Monospace, sans-serif;
+        color: rgb(134, 134, 134);
+    }
+
+    .buttonSbtn2 h1:hover {
+        color: rgb(255, 255, 255);
+        transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+
+
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        justify-items: center;
+        margin-top: 60px;
+    }
+
+    .card {
+        /* background-color: yellow; */
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 80px;
+        padding-left: 80px;
+        margin: 0.5em;
+        display: grid;
+        grid-template-rows: 1fr 0.2fr;
+        justify-items: center;
+    }
+
+    .card h1 {
+        margin-top: 20px;
+        color: white;
+        font: 20px/normal "Antic", Helvetica, sans-serif;
+    }
+
+    /* .card:hover {
+        box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
+            rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+        transform: scale(1.1);
+    } */
+
+    .card img {
+        border: 3px solid rgb(188, 253, 171);
+        box-shadow: 0 0 9px 4px rgba(0, 0, 0, 0.527);
+
+        border-radius: 50%;
+        width: 7em;
+        height: 7em;
+        -webkit-transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+        -moz-transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+        -o-transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+        transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+    }
+
+    .card img:hover {
+        transform: scale(1.1);
+        -webkit-transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+        -moz-transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+        -o-transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+        transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+
+    }
+
+    section {
+        background: rgba(0, 0, 0, 0);
+    }
+
+    #BAAR {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 8px;
+        background: linear-gradient(to right, #202225, rgb(90, 0, 63));
+        width: 0%;
+        z-index: 10000000000;
+        transition: width 0.2s ease-out;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0px;
+        z-index: 10;
+        background: #383c3c;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #202225;
+        border-radius: 5px;
+        z-index: 11;
+    }
+
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .secNav {
+
+        background: #292c30;
+        /* border-bottom: rgba(35, 39, 42, 0.411) 3px solid; 
+
+*/
+        width: 100%;
+        height: 50px;
+        /* margin: auto; */
+        padding: 150px 0;
+        /* display: flex; */
+        display: flex;
+        /* align-items: center; */
+        text-align: center;
+        justify-content: center;
+
+    }
+
+
+    .ThrdNav {
+
+        background: #373b41;
+        /* border-bottom: rgba(35, 39, 42, 0.411) 3px solid; 
+
+*/
+        width: 100%;
+        height: 50px;
+        /* margin: auto; */
+        padding: 150px 0;
+        /* display: flex; */
+        display: flex;
+        /* align-items: center; */
+        text-align: center;
+        justify-content: center;
+
+    }
+
+    .ThrdNav h3 {
+        display: flex;
+        justify-content: center;
+
+        text-align: center;
+        margin-top: -100px;
+        padding-top: 2%;
+        font: normal 40px/normal "Antic", Helvetica, sans-serif;
+        /* font-size: 1.5em; */
+        color: white;
+    }
+
+    .picker {
+        margin: 2em;
+        margin-top: -20px;
+        /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #23272a;
+    border-radius: 3px; */
+    }
+
+    .picker h3 {
+        text-align: center;
+        /* padding-top: 2%; */
+        font: normal 40px/normal "Antic", Helvetica, sans-serif;
+        /* font-size: 1.5em; */
+        color: white;
+    }
+
+    .picker h2 {
+        text-align: center;
+        /* padding-top: 2%; */
+        font: normal 20px/normal "Antic", Helvetica, sans-serif;
+        /* font-size: 1.5em; */
+        color: rgb(75, 75, 75);
+    }
+
+    .picker2 {
+        margin: 2em;
+        /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #23272a;
+    border-radius: 3px; */
+    }
+
+    .picker2 h3 {
+        text-align: center;
+        /* padding-top: 2%; */
+        font: normal 40px/normal "Antic", Helvetica, sans-serif;
+        /* font-size: 1.5em; */
+        color: white;
+    }
+
+    .picker2 h2 {
+        text-align: center;
+        /* padding-top: 2%; */
+        font: normal 20px/normal "Antic", Helvetica, sans-serif;
+        /* font-size: 1.5em; */
+        color: rgb(75, 75, 75);
+    }
+
+    .brand-img {
+        border: 5px solid #202225;
+        width: 75px !important;
+        border-radius: 50%;
+    }
+
+    .loogo {
+        top: 8px;
+        position: absolute;
+        left: 52%;
+        margin-left: -50px !important;
+        display: block;
+    }
+
+    .LogoutButton {
+        font: 12px arial, sans-serif;
+        color: #5865F2;
+        text-decoration: none;
+        border-radius: 10%;
+        /* padding: 10px; */
+        top: 30px;
+        position: absolute;
+        /* left: 10%; */
+        margin-left: 10% !important;
+        margin-top: 1.5% !important;
+        display: inline-block;
+    }
+
+    .LogoutButton:hover {
+        color: #7983f1;
+        /* background-color: #202225;
+    transform: scale(1.1); */
+    }
+
+    .username {
+        position: absolute;
+        font: 14px arial, sans-serif;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        /* left: 50%; */
+        /* padding: 10px;
+top: -2px; */
+        margin-left: 6.5% !important;
+        margin-top: 20px !important;
+    }
+
+    .username:hover {
+        color: rgb(202, 202, 202);
+    }
+
+    .avatar {
+        border-radius: 30%;
+        margin-left: 14px !important;
+        height: 55px;
+        width: 55px;
+        /* border: 4px solid rgba(44, 47, 51, 0.75); */
+    }
+
+    .main-nav {
+        /* padding-top: 0.3125rem;
+        padding-bottom: 0.3125rem; */
+        background: #202225;
+        /* border-bottom: rgba(35, 39, 42, 0.411) 3px solid; */
+        /* width: fit-content; */
+        height: 50px;
+        margin: auto;
+        padding: 10px 0;
+        display: flex;
+        align-items: left;
+        justify-content: space-around;
+        /* flex-wrap: nowrap; */
+        justify-content: left;
+
+        /* margin: auto; */
+        /* display: flex; */
+        /* justify-content: space-between; */
+        /* flex-wrap: nowrap; */
+        /* justify-content:right; */
+        /* border: 4px solid rgb(106, 255, 170); */
+    }
+
+    header {
+        height: 100px;
+        width: 100%;
+        position: fixed;
+        z-index: 9999;
+
+    }
+
+    .main-nav ul li {
+        list-style: none;
+        display: inline-block;
+        margin: 0 20px;
+        position: relative;
+    }
+
+    .main-nav ul li a {
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .main-nav ul li::after {
+        content: "";
+        height: 3px;
+        width: 0;
+        background: var(--main-color);
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        transition: 0.5s;
+    }
+</style>
+
+</html>
